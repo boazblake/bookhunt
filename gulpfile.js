@@ -51,4 +51,5 @@ gulp.task('serve', ['style', 'inject'], () => {
     .on('restart', function(ev) {
       console.log('Restarting App...');
     });
-} );
+});
+
