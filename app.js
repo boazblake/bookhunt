@@ -5,12 +5,13 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(express.static('public'));
-app.use(express.static('src/views'));
+app.set('views', './src/views' );
+app.set('view engine', 'jade' );
 
 
 
 app.get('/', (req, resp) => {
-    resp.send('jellow world');
+    resp.render('index', {list: ['a', 'b']});
 });
 
 app.get('/books', (req, resp) => {
