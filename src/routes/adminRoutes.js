@@ -6,13 +6,15 @@ var books = [
         {
             'link': 'http://www.packtpub.com/learning-jquery-with-simple-javascript-techniques-fourth-edition/book',
             'imgSrc': 'http://jquery.com/jquery-wp-content/themes/jquery/content/books/learning-jquery-4th-ed.jpg',
-            'title': 'Learning jQuery Fourth Edition',
+            'bookId': '656',
+            'title': 'war and peace',
             'authors': 'Karl Swedberg and Jonathan Chaffer'
         },
         {
             'link': 'http://www.manning.com/affiliate/idevaffiliate.php?id=648_176',
             'imgSrc': 'http://jquery.com/jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg',
-            'title': 'jQuery in Action',
+            'title': 'les mis',
+            'bookId': '24280',
             'authors': 'Bear Bibeault and Yehuda Katz'
         },
         {
