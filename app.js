@@ -2,6 +2,19 @@ const express = require('express');
 
 const app = express();
 
+const sql = require('mssql');
+
+const config = {
+	user: 'books',
+	password: 'bookhunter',
+	server: 'localhost\\5000'
+};
+
+
+sql.connect(config, (err) => {
+	console.log('err', err);
+});
+
 const port = process.env.PORT || 5000;
 const nav = 
 	[
