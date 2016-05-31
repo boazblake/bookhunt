@@ -31,7 +31,8 @@ var router = (nav) => {
 		{
 			title: 'Book H',
 			author: 'Author H'
-		}];
+		}
+	];
 	bookRouter.route('/')
 		.get((req, res) => {
 			res.render('bookListView', {
