@@ -5,7 +5,8 @@ const ObjectId = require('mongodb').ObjectID;
 
 
 var router = (nav) => {
-	var bookController = require('../controllers/bookController')(null, nav);
+	var bookService = require('../services/goodReadsService')();
+	var bookController = require('../controllers/bookController')(bookService, nav);
 
 	bookRouter.use(bookController.middleWare);
 

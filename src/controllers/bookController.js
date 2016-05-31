@@ -36,15 +36,19 @@ const bookController = (bookService, nav) => {
             var collection = db.collection('books');
 
             collection.findOne({_id: id},
-                (err, book) => {
-                    res.render('bookView', {
-                        title: 'Books',
-                        nav: nav,
-                        book: book
+                (err, results) => {
+                    bookService.getBookById(results.bookId,
+                        (err, book) => {
+                            results.book = book;
+                            res.render('bookView', {
+                                title: 'Books',
+                                nav: nav,
+                                book: results
+                            });                            
+                        });
+                    });
                 });
-            });
-        });
-    };
+            };
     
     return {
         getIndex: getIndex,
